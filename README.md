@@ -3,7 +3,7 @@ Kconfig project for Compile/Cross_Compile kernel module in a simple way
 
 # Introduction
 With this project you'll be able to Compile or Cross_Compile a kernel module.
-Just simple type "make menuconfig" and configure module build.ù
+Just simple type "make menuconfig" and configure module build
 
 # Build Targets
 	

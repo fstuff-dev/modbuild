@@ -1,0 +1,59 @@
+
+
+menu "Install Options"
+
+#########################INSTALL CHOICE
+
+choice TARGET
+	prompt "Target Type"
+	
+	config LOCAL
+		bool "local Target" 
+		help
+			"Local Install"
+
+	config REMOTE
+		bool "Remote Target"
+		help
+			"Remote Install"
+endchoice
+
+config SUDO_PSW
+	string "sudo password"
+	help
+		sudo passwor fot local install
+
+config INSTALL_DIR
+	string "Installation path"
+	help
+		Installation directory
+
+#########################REMOTE INSTALL
+menu "Remote Install"
+	depends on REMOTE
+
+config REMOTE_USR
+	string "Remote username"
+	help
+		Define the Cross-compiler prefix
+
+config REMOTE_PSW
+	string "Remote password"
+	help
+		Define the Cross-compiler path
+
+
+config NETWORK_INSTALL
+	bool "Network Install"
+	help
+		Set if you want to install to a remote network Target
+
+config REMOTE_IP
+	depends on NETWORK_INSTALL
+	string "Remote IP"
+	help
+		Define The architecture to build
+
+endmenu
+		
+endmenu

@@ -1,0 +1,21 @@
+
+config MOD_NAME
+	string "Module Name"
+	default "mod" 
+	help
+		Set the Name of your module
+
+config MOD_PATH
+	string "Module Path"
+	help
+		Set the path of module source code
+		
+config MOD_OBJS
+	string "Module Objects"
+	help
+		Write the objects to build. Each should be followed by space
+
+config KERNEL_DIR
+	string "Kernel dir"
+	help
+		Set the path of kernel source code

@@ -1,0 +1,32 @@
+
+
+menu "Build Options"
+
+choice COMPILER
+	prompt "Compiler"
+	
+	config GCC
+		bool "GCC"
+		help
+			"Compile using a GCC Compiler"
+endchoice
+
+config CROSS_PREFIX
+	string "Cross-compiler tool prefix"
+	help
+		Define the Cross-compiler prefix
+
+config CROSS_PATH
+	string "Cross-compiler Path"
+	help
+		Define the Cross-compiler path
+
+config ARCH
+	string "Architecture"
+	help
+		Define The architecture to build
+
+		
+##### GCC COMPILER #####
+		
+endmenu

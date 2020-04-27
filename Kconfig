@@ -1,0 +1,17 @@
+#
+# For a description of the syntax of this configuration file,
+# see Documentation/kbuild/kconfig-language.txt.
+#
+mainmenu "Linux Module Build System"
+
+#Modules Configuration
+source "Kconfigs/Kconfig_module"
+
+#Toolchain Configuration
+source "Kconfigs/Kconfig_toolchain"
+
+#Install Configuration
+source "Kconfigs/Kconfig_install"
+
+
+

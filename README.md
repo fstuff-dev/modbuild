@@ -22,9 +22,9 @@ Every target perform some action based on .config generated with menuconfig
     MOD_NAME                -   Name of the module to build
     MOD_OBJS                -   Object used for module build
     KERNEL_DIR              -   Top directory of the kernel
-    MOD_PATH                -   The path of where is located the module source code
-    INSTALL_DIR             -   The Directory where to install the module
-    REMOTE_USR              -   Name of the user for SSH Connetion with remote target in case of Network Install
+    MOD_PATH                -   The path where the module source code is located
+    INSTALL_DIR             -   The Directory where the module will be installed
+    REMOTE_USR              -   User for SSH Connetion with remote target in case of Network Install
     REMOTE_PSW              -   Password of the SSH user in case of Network Install
     REMOTE_IP               -   IP of the remote Target in case of Network Install
 

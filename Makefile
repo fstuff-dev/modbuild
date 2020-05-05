@@ -341,6 +341,7 @@ endif # $(dot-config)
 ##################################################################################################################################
 #------------------------------------------------------- Define the module name
 MOD_NAME		:=	$(CONFIG_MOD_NAME:"%"=%)
+DEFCONFIG 		:=	$(CONFIG_DEF_CONF_NAME:"%"=%)
 #------------------------------------------------------- Password for sudo cmd
 PASSW			:=	$(CONFIG_SUDO_PSW:"%"=%)
 #------------------------------------------------------- Set directories
@@ -417,11 +418,17 @@ mod-install:
 	$(DEMPMOD)
 	@echo ""
 	
+store:	
+	$(MAKE) savedefconfig 
+	cp defconfig configs/$(DEFCONFIG)	
+
+
+
 flush:mod-clean
 install:all mod-install
 
 
-PHONY += mod-all flush mod-clean install mod-install
+PHONY += mod-all flush mod-clean install mod-install store
 
 
 PHONY += $(modbuild-dirs)
@@ -548,6 +555,7 @@ help:
 	@echo  ''
 	@echo  'menuconfig              -  Configure the module build'
 	@echo  'savedefconfig           -  Save current config in a file called defconfig '
+	@echo  'store           	-  Save current config in configs directory with preferred name '
 	@echo  'distclean               -  Clean all '
 	@echo  'all                     -  Build the module'
 	@echo  'install                 -  Install the module to your target'

@@ -10,6 +10,7 @@ Just simple type "make menuconfig" and configure module build
     'menuconfig              -  Configure the module build'
     'gconfig                 -  Configure the module build with gtk interface'
 	'savedefconfig           -  Save current config in a file called defconfig '
+	'store           	 -  Save current config in configs directory with preferred name '
 	'distclean               -  Clean all '
 	'all                     -  Build the module'
 	'install                 -  Install the module to your target'

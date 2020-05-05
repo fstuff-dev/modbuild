@@ -19,3 +19,8 @@ config KERNEL_DIR
 	string "Kernel dir"
 	help
 		Set the path of kernel source code
+
+config DEF_CONF_NAME
+	string "Defconfig name"
+	help
+		Set the defconfig name for store targer
